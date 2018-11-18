@@ -14,9 +14,9 @@ source:
   sha256: c565fd238bc1a889f874a2749c5da0eaa8af2e18af801ea65d9f8c3da4cf319a
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,8 +39,7 @@ about:
   license: GPL-2
   summary: A complete unit test system and functions to implement its GUI part
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
