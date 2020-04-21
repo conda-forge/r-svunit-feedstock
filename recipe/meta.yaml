@@ -1,4 +1,4 @@
-{% set version = '0.7-12' %}
+{% set version = "1.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,19 +11,19 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/svUnit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/svUnit/svUnit_{{ version }}.tar.gz
-  sha256: c565fd238bc1a889f874a2749c5da0eaa8af2e18af801ea65d9f8c3da4cf319a
+  sha256: bc059c8c49eccdaf27c485174570f942f8237d31381b6c9347c9060ff44c9f2b
 
 build:
   noarch: generic
-  merge_build_host: True  # [win]
-  number: 1002
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
   run:
@@ -39,7 +39,7 @@ about:
   license: GPL-2
   summary: A complete unit test system and functions to implement its GUI part
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
