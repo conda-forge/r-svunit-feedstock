@@ -1,4 +1,4 @@
-{% set version = "1.0.3" %}
+{% set version = "1.0.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/svUnit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/svUnit/svUnit_{{ version }}.tar.gz
-  sha256: bc059c8c49eccdaf27c485174570f942f8237d31381b6c9347c9060ff44c9f2b
+  sha256: 263e6c03d6c2717dfd25b96d25f8019c9c98120de280a17224e0d79adba2d522
 
 build:
   noarch: generic
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
