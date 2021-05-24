@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: svUnit_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/svUnit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/svUnit/svUnit_{{ version }}.tar.gz
   sha256: 263e6c03d6c2717dfd25b96d25f8019c9c98120de280a17224e0d79adba2d522
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,10 +35,11 @@ test:
 
 about:
   home: http://www.sciviews.org/SciViews-R
-  license: GPL-2
+  license: GPL-2.0-only
   summary: A complete unit test system and functions to implement its GUI part
   license_family: GPL2
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
