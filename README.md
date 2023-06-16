@@ -1,11 +1,11 @@
-About r-svunit
-==============
+About r-svunit-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-svunit-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.sciviews.org/SciViews-R
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-svunit-feedstock/blob/main/LICENSE.txt)
 
 Summary: A complete unit test system and functions to implement its GUI part
 
