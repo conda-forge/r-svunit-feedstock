@@ -1,4 +1,4 @@
-{% set version = "1.0.6" %}
+{% set version = "1.0.8" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/svUnit_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/svUnit/svUnit_{{ version }}.tar.gz
-  sha256: 263e6c03d6c2717dfd25b96d25f8019c9c98120de280a17224e0d79adba2d522
+  sha256: 2aafcba0f4dcb9f4cb16c4af4d77b786a3f4b87c6b79537a1d4969e0c6576fd2
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
